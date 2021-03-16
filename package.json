@@ -6,8 +6,8 @@
   "scripts": {
     "cucumber": "cucumber-js -f json:cucumber_report.json && node report.js",
     "generate:report": "node report.js",
-    "test": "NODE_ENV=development npm run cucumber",
-    "test:chromium": "NODE_ENV=development HEADLESS=false npm run cucumber"
+    "test": "cucumber-js -f json:cucumber_report.json && node report.js",
+    "test:chromium": "cucumber-js -f json:cucumber_report.json && node report.js"
   },
   "repository": {
     "type": "git",
