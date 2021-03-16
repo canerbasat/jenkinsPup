@@ -1,0 +1,82 @@
+const HOME_SELECTORS = {
+  "btn_Cookie_Onay": "a[class='cookiesLinkPre']",
+  "btn_Anasayfa_GirisYap": "#btnLogin",
+  "tb_GirisYap_KullaniciAdi": "input[class='mdl-textfield__input strykerusername']",
+  "tb_GirisYap_Sifre": "input[class='mdl-textfield__input']",
+  "tb_GirisYap_Submit": "input[type='submit']",
+  "lbl_Anasayfa_KullaniciAdi": "div[class='dropdown user-section']>a>span[id='userName']",
+  "btn_Anasayfa_YurtIciOtel": "#otelMenuTr",
+  "btn_YurtIciOtel_Gideceginiz_Yer": "input[id='hotelReservationForm:whereYouWantGrid:whereText']",
+  "btn_YurtIciOtel_Gideceginiz_Yer_Ilk_Otel": "tr.richfaces_suggestionEntry > td:nth-of-type(2) > .fontMerriweather",
+  "btn_YurtIciOtel_Oda_Sayisi": "form#hotelReservationForm .row .form-control",
+  "btn_YurtIciOtel_DevamEtButonu": "div[class='actionButtons center'] > input",
+  "btn_YurtIciOtel_RezervasyonYap": "input[value='Rezervasyon Yap']",
+  "btn_RezervasyonYap_Devam": "input[type='submit']",
+  "btn_Rezervasyonu_Tamamla": "a[class='rezOnayBlock']",
+  "lbl_Rezervasyonu_Talep_Bilgileri_Mesaji": "span[class='rich-messages-label']",
+  "btn_Tarih_Bugun": ".rich-calendar-today",
+  "btn_Gidis_Tarihi": "input[name='hotelReservationForm:dateCheckINDecoration:updateInputDate']",
+  "btn_OteldeOde": "input[name='hotelReservationForm:guestPaymentDecoration:guestPaymentCheckBox']",
+  "btn_OdemeTipi":"form#hotelReservationForm > div > div:nth-of-type(3) .form-control",
+  "dD_Oda_Tipi": "span#roomSizeUniq > .form-control",
+  "tb_YurtIciOtel_RezervasyonYap_Ad": "span[id='nameUniq'] > input",
+  "tb_YurtIciOtel_RezervasyonYap_SoyAd": "span[id='lastNameUniq'] > input",
+  "tb_YurtIciOtel_RezervasyonYap_Konaklayici_Mail": "span[id='invoiceOwnerUniq'] > input",
+  "tb_YurtIciOtel_RezervasyonYap_HesKodu": "span[id='hesCodeUniq'] > input",
+  "btn_YurtIciGidisTarihi": "input[id='hotelReservationForm:dateCheckINDecoration:updateInputDate']",
+  "lbl_YurtIciOtel_GidisTarihi_AyYil": "input[id='hotelReservationForm:dateCheckINDecoration:updateInputCurrentDate']",
+  "btn_YurtIciOtel_GidisTarihi_SonrakiAy": "td[class='rich-calendar-header'] td:nth-of-type(4)",
+  "btn_YurtIciOtel_CikisTarihi": "input[id='hotelReservationForm:dateCheckOUTDecoration:checkOutInputDate']",
+  "btn_YurtIciOtel_CikisTarihi_AyYil": "input[id='hotelReservationForm:dateCheckOUTDecoration:checkOutInputCurrentDate']",
+  "btn_YurtIciOtel_RezervasyonYap_OdaTipi": "span[id='roomSizeUniq'] > select",
+  "tb_YurtIciOtel_RezervasyonYap_Ad": "span[id='nameUniq'] > input",
+  "lbl_Hatali_Login_Mesaji": "div.text-danger li",
+  "btn_Cikis": "i[class='fa fa-sign-out fa-fw']",
+  "btn_Hakkimizda": "a[href='/hakkimizda']",
+  "btn_Iletisim": "a[href='/bize-ulasin']",
+  "btn_CerezPolitikasi": "a[href='/cerez-politikasi']",
+  "btn_SikSorulanSorular": "a[href='/yardim']",
+  "btn_SeturBizLogo": "[src='https://cdn.seturbiz.com/content/img/home/logo.png']",
+  "btn_Sifre_Yenile": ".remember-link",
+  "btn_YurtDisiOtel": "#hotelMenuTr",
+  "btn_Ucak": "#flightMenuTr",
+  "btn_Arac": "#carMenuTr",
+  "btn_Transfer": "#transferMenuTr",
+  "btn_Train": "#trainMenuTr",
+  "btn_Toplanti": "#meetingMenuTr",
+  "btn_Kullanici_Adi": "#userName",
+  "btn_Kullanici_Adi_Uye_Bilgilerini_Guncelleme": "#webUser",
+  "btn_Kurumsal_Uyelik_Kurallari": "ul.dropdown-menu-right > li:nth-of-type(3) > a",
+  "btn_Yeni_Kurumsal_Kullanici_Istegi":"ul.dropdown-menu-right > li:nth-of-type(4) > a",
+  "btn_Rezervasyonlarim_Tum_Rezervasyonlar": "ul.nav > li:nth-of-type(2) li:nth-of-type(1) > a",
+  "btn_Rezervasyonlarim_YurtIciOtel": "ul.nav > li:nth-of-type(2) li:nth-of-type(2) > a",
+  "btn_Rezervasyonlarim_YurtDisiOtel": "ul.nav > li:nth-of-type(2) li:nth-of-type(3) > a",
+  "btn_Rezervasyonlarim_Ucak": "ul.nav > li:nth-of-type(2) li:nth-of-type(5) > a",
+  "btn_Rezervasyonlarim_Arac": "ul.nav > li:nth-of-type(2) li:nth-of-type(6) > a",
+  "btn_Rezervasyonlarim_Transfer": "ul.nav > li:nth-of-type(2) li:nth-of-type(7) > a",
+  "btn_Rezervasyonlarim_Toplanti": "ul.nav > li:nth-of-type(2) li:nth-of-type(8) > a",
+  "btn_Rezervasyonlarim_Tren": "ul.nav > li:nth-of-type(2) li:nth-of-type(9) > a",
+  "btn_Rezervasyonlarim": "ul.nav > li:nth-of-type(2) > .dropdown-toggle",
+  "tb_Ucak_Nereden": "input[id='flightSearchForm:flightOrigin:fromInput']",
+  "btn_Ucak_Nereden_Ilk_Secim": "tr.rich-sb-int-sel > td:nth-of-type(2)",
+  "tb_Ucak_Nereye": "input[id='flightSearchForm:flightDestination:returnInput']",
+  "btn_Ucak_Nereye_Ilk_Secim": "body > div:nth-of-type(1) tr:nth-of-type(1) > td:nth-of-type(2) > span:nth-of-type(1)",
+  "btn_Ucak_GidisTarihi": "input[name='flightSearchForm:lightOriginDate:departureInputDate']",
+  "btn_Ucak_DonusTarihi": "input[name='flightSearchForm:lightReturnDate:returnInputDate']",
+  "btn_Ucak_YolcuSayisi": "div.flightStepBack1 > .form-group div > span > .form-control",
+  "btn_Ucak_Ara": ".right.form-group > input",
+  "btn_Ucak_GidisTarihi_SonrakiAy": "td[class='rich-calendar-header'] td:nth-of-type(4)",
+
+
+
+
+
+  
+
+
+  
+  
+};
+
+
+module.exports = HOME_SELECTORS;
