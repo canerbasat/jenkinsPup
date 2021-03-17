@@ -35,6 +35,7 @@ const {
   roomTypeSelectAndFillInfo,
   choosePaymentType,
   selectDepartureDatePlane,
+  selectReturnDatePlane,
 } = require('../support/actions');
 
 Given(/Gidis tarihi (.+) gun sonrasina secilir/, async (inDate) =>
@@ -45,6 +46,9 @@ Given(/Gidis tarihiucak (.+) gun sonrasina secilir/, async (inDate) =>
 selectDepartureDatePlane(inDate)
 );
 
+Given("Donus", async () =>
+selectReturnDatePlane()
+);
 
 Given(/Odeme tipi (.+) secilir/, async (paymentType) =>
 choosePaymentType(paymentType)

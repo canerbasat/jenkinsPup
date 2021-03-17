@@ -309,6 +309,47 @@ const selectDepartureDatePlane = async (inDate) => {
 }
 
 
+const selectReturnDatePlane = async (returnDate) => {
+  await waitFor(3)
+  var d = new Date();
+  var today = d.getDate();
+  d.setDate(d.getDate()+parseInt(33))
+  
+  var day = d.getDate();
+  var month = ("0" + (d.getMonth() + 1)).slice(-2); 
+  var year = d.getFullYear();
+  var departureDateMonthYear = month+"/"+year;
+  await console.log("Donus Tarihi: "+day+"/"+month+"/"+year);
+  
+  await clickOn("btn_Ucak_DonusTarihi");
+
+  var thisMonthValue = await scope.currentPage.$eval("input[name='flightSearchForm:lightReturnDate:returnInputCurrentDate']",
+                  element=> element.getAttribute("value"))
+  console.log(thisMonthValue)
+  
+  var thisMonthValueForDayChoose = thisMonthValue;
+
+  while(thisMonthValue!=departureDateMonthYear){
+    await waitFor(1)
+    await clickOn("btn_Ucak_GidisTarihi_SonrakiAy")
+    await waitFor(1)
+    thisMonthValue = await scope.currentPage.$eval("input[name='flightSearchForm:lightReturnDate:returnInputCurrentDate']",
+    element=> element.getAttribute("value"));
+    if (thisMonthValue==01/2022) {
+      console.log("hataliSecimErrorFirlat");
+    }
+  }
+  if(thisMonthValue==departureDateMonthYear){
+    if(thisMonthValueForDayChoose==departureDateMonthYear){
+      const dayList = await scope.currentPage.$$("td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-select'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] ,  td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"]");
+      await dayList[day-today].click();
+    }else{
+      const dayList = await scope.currentPage.$$("td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-select'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] ,  td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"]");
+      await dayList[day-1].click();
+    }
+  }
+}
+
 Date.prototype.addDays = function(days) {
   var date = new Date(this.valueOf());
   date.setDate(date.getDate() + days);
@@ -349,5 +390,6 @@ module.exports = {
   selectInAndOutDate,
   roomTypeSelectAndFillInfo,
   choosePaymentType,
+  selectReturnDatePlane,
 
 };
