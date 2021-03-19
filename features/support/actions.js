@@ -117,11 +117,6 @@ const seeElement = async (name) => {
 const seeVisibleElement = async (name) => {
   const selector = getSelector(name);
   await scope.currentPage.waitForSelector(selector, { visible: true });
-
-  strictEqual(
-    await scope.currentPage.$eval(selector, (el) => Boolean(el)),
-    true
-  );
 };
 
 const noElement = async (name) => {
@@ -211,7 +206,6 @@ const roomTypeSelectAndFillInfo = async () => {
     await waitFor(1)
 
   }
-
 }
 
 
@@ -227,6 +221,74 @@ const choosePaymentType = async (paymentType) => {
     await selectVal("btn_OdemeTipi","CASH")
   }
 }
+
+const choosePaymentTypeForPlane = async (paymentType) => {
+  if(paymentType=="SirketOdemeli"){
+    await waitFor(1)
+    await clickOn("btn_Ucus_Odeme_Tipi_SirketOdemeli")
+    }else if(paymentType=="KrediKarti"){
+    await waitFor(1)
+    await clickOn("btn_Ucus_Odeme_Tipi_KrediKarti")
+  }
+}
+
+const selectDomesticFlight = async (destinatation) => {
+  if(destinatation=="OW"){
+    await waitFor(1)
+    const domesticFlights = await scope.currentPage.$$("div[id='flightSearchForm:domesticFlights'] > table > tbody> tr > td:nth-child(5) > div[class='containerFN'] > ul > li > table > tbody > tr > td > input[title='Turkish Airlines']");
+    const domesticFlightsRandom = Math.floor(Math.random() * domesticFlights.length) + 1;
+    await domesticFlights[domesticFlightsRandom].click();
+    await waitFor(1)
+    await clickOn("btn_UcusListesi_DevamEt") 
+  }else{
+    await waitFor(1)
+    const domesticFlights = await scope.currentPage.$$("div[id='flightSearchForm:domesticFlights'] > table > tbody> tr > td:nth-child(5) > div[class='containerFN'] > ul > li > table > tbody > tr > td > input[title='Turkish Airlines']");
+    const domesticFlightsRandom = Math.floor(Math.random() * domesticFlights.length) + 1;
+    await domesticFlights[domesticFlightsRandom].click();
+    await waitFor(1)
+    const returnFlights = await scope.currentPage.$$("div[id='flightSearchForm:returnFlights'] > table > tbody> tr > td:nth-child(5) > div[class='containerFN'] > ul > li > table > tbody > tr > td > input[title='Turkish Airlines']");
+    const returnFlightsLength = Math.floor(Math.random() * returnFlights.length) + 1;
+    await returnFlights[returnFlightsLength].click();
+    await clickOn("btn_UcusListesi_DevamEt") 
+  }
+};
+
+
+
+const fillPasssengerInformationPlain = async () => {
+  const cinsiyet = getSelector("btn_Ucus_Yolcu_Bilgileri_Cinsiyet");
+  await scope.currentPage.waitForSelector(cinsiyet,{visible: true});
+  const passengersCount = (await scope.currentPage.$$("input[class='form-control nameUnique']")).length;
+  for (let j = 0; j < passengersCount; j++) {
+    waitFor(1)
+
+    let cinsiyet = await scope.currentPage.$$("select[class='form-control genderUnique']")
+    let adBilgisi = await scope.currentPage.$$("input[class='form-control nameUnique']");
+    let soyadBilgisi = await scope.currentPage.$$("input[class='form-control surnameUnique']");
+    let dogumTarihi =  await scope.currentPage.$$("input[class='form-control dateOfBirthUnique']");
+    let eposta = await scope.currentPage.$$("input[class='form-control eMailUnique']");
+    let gsdmKod = await scope.currentPage.$$("input[class='form-control gsmCodeUnique']");
+    let gsmNumara = await scope.currentPage.$$("input[class='form-control gsmNumberUnique']");
+    let tckn = await scope.currentPage.$$("input[class='form-control identityUnique']");
+    let hesKodu = await scope.currentPage.$$("input[class='form-control hesCodeUnique']");
+
+    await cinsiyet[j].select("1");
+    await adBilgisi[j].type("Caner");
+    await soyadBilgisi[j].type("Basat");
+    await dogumTarihi[j].type("12/11/1996");
+    await eposta[j].type("test@test.com");
+    await gsdmKod[j].type("534");
+    await gsmNumara[j].type("4585220");
+    await tckn[j].type("48703351180");
+    await hesKodu[j].type("N4E9865717");
+  }
+  await clickOn("btn_Ucus_AcenteKurallari")
+  await clickOn("btn_Ucus_UcusKurallari")
+    
+
+}
+
+
 
 
 //Ihtiyac aninda outDate parametresi gec
@@ -299,21 +361,24 @@ const selectDepartureDatePlane = async (inDate) => {
   }
   if(thisMonthValue==departureDateMonthYear){
     if(thisMonthValueForDayChoose==departureDateMonthYear){
+      await waitFor(1)
       const dayList = await scope.currentPage.$$("td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-today rich-calendar-btn']");
       await dayList[day-today].click();
+      await waitFor(1)
     }else{
+      await waitFor(1)
       const dayList = await scope.currentPage.$$("td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-today rich-calendar-btn']");
       await dayList[day-1].click();
+      await waitFor(1)
     }
   }
 }
-
 
 const selectReturnDatePlane = async (returnDate) => {
   await waitFor(3)
   var d = new Date();
   var today = d.getDate();
-  d.setDate(d.getDate()+parseInt(33))
+  d.setDate(d.getDate()+parseInt(returnDate))
   
   var day = d.getDate();
   var month = ("0" + (d.getMonth() + 1)).slice(-2); 
@@ -331,7 +396,7 @@ const selectReturnDatePlane = async (returnDate) => {
 
   while(thisMonthValue!=departureDateMonthYear){
     await waitFor(1)
-    await clickOn("btn_Ucak_GidisTarihi_SonrakiAy")
+    await clickOn("btn_Ucak_DonusTarihi_SonrakiAy")
     await waitFor(1)
     thisMonthValue = await scope.currentPage.$eval("input[name='flightSearchForm:lightReturnDate:returnInputCurrentDate']",
     element=> element.getAttribute("value"));
@@ -341,11 +406,12 @@ const selectReturnDatePlane = async (returnDate) => {
   }
   if(thisMonthValue==departureDateMonthYear){
     if(thisMonthValueForDayChoose==departureDateMonthYear){
-      const dayList = await scope.currentPage.$$("td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-select'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] ,  td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"]");
-      await dayList[day-today].click();
-    }else{
-      const dayList = await scope.currentPage.$$("td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-select'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] ,  td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"]");
+      const dayList = await scope.currentPage.$$("td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-boundary-dates'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-boundary-dates'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-boundary-dates'] ,td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-select'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] ,  td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"]");
       await dayList[day-1].click();
+    }else{
+      const dayList = await scope.currentPage.$$("td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-boundary-dates'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-boundary-dates'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-boundary-dates'] ,td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-select'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] ,  td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-btn'][onclick=\"$('flightSearchForm:lightReturnDate:return').component.eventCellOnClick(event, this);\"]");
+      //Bura patlıyo
+      await dayList[day].click();
     }
   }
 }
@@ -391,5 +457,7 @@ module.exports = {
   roomTypeSelectAndFillInfo,
   choosePaymentType,
   selectReturnDatePlane,
-
+  selectDomesticFlight,
+  fillPasssengerInformationPlain,
+  choosePaymentTypeForPlane,
 };

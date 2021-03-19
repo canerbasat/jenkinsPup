@@ -66,7 +66,17 @@ const HOME_SELECTORS = {
   "btn_Ucak_YolcuSayisi": "div.flightStepBack1 > .form-group div > span > .form-control",
   "btn_Ucak_Ara": ".right.form-group > input",
   "btn_Ucak_GidisTarihi_SonrakiAy": "td[class='rich-calendar-header'] td:nth-of-type(4)",
-
+  "btn_Ucak_DonusTarihi_SonrakiAy": "div.flightStepBack1 > div:nth-of-type(4) td:nth-of-type(4) > div:nth-of-type(1)",
+  "btn_Ucus_Filtele": "input[name='flightSearchForm:filterFlightButton']",
+  "btn_UcusListesi_DevamEt": "input[value='Devam Et »']",
+  "btn_Ucus_OnRezervasyon": "input[value='Ön Rezervasyon']",
+  "btn_Ucus_Yolcu_Bilgileri_Cinsiyet": ".col-md-12 > div:nth-of-type(2) .form-control",
+  "btn_Ucus_AcenteKurallari": "input[id='flightReservationForm:checkInRules']",
+  "btn_Ucus_UcusKurallari": "input[id='flightReservationForm:checkInRules1']",
+  "btn_Ucus_Odeme_Tipi_SirketOdemeli": "input[value='FULLCREDIT']",
+  "btn_Ucus_Odeme_Tipi_KrediKarti": "input[value='CASH']",
+  "btn_Ucus_TekYon": "input[value='true']",
+  "btn_Ucak_Ebilet_Kes": "div[class='col-md-2 col-sm-4 col-xs-12 center'] > input[value='E-Bilet Kes']",
 
 
 

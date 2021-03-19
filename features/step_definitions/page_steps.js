@@ -36,23 +36,39 @@ const {
   choosePaymentType,
   selectDepartureDatePlane,
   selectReturnDatePlane,
+  selectDomesticFlight,
+  fillPasssengerInformationPlain,
+  choosePaymentTypeForPlane
 } = require('../support/actions');
 
 Given(/Gidis tarihi (.+) gun sonrasina secilir/, async (inDate) =>
 selectInAndOutDate(inDate)
 );
 
-Given(/Gidis tarihiucak (.+) gun sonrasina secilir/, async (inDate) =>
+Given(/Gidis ucus tarihi (.+) gun sonrasina secilir/, async (inDate) =>
 selectDepartureDatePlane(inDate)
 );
 
-Given("Donus", async () =>
-selectReturnDatePlane()
+Given(/Ucus (.+) secilir/, async (destinatation) =>
+selectDomesticFlight(destinatation)
+);
+
+
+
+Given(/Donus ucus tarihi (.+) gun sonrasina secilir/, async (returnDate) =>
+selectReturnDatePlane(returnDate)
 );
 
 Given(/Odeme tipi (.+) secilir/, async (paymentType) =>
 choosePaymentType(paymentType)
 );
+
+Given(/Ucak odeme tipi (.+) secilir/, async (paymentType) =>
+choosePaymentTypeForPlane(paymentType)
+);
+
+
+
 
 
 Given("Yolcu bilgileri doldurulur", async () =>
@@ -60,7 +76,13 @@ roomTypeSelectAndFillInfo()
 );
 
 
+Given("Yolcu ucusbilgileri doldurulur", async () =>
+fillPasssengerInformationPlain()
+);
 
+
+
+When(/"(.+)" gorunene kadar beklenir/, async (name) => seeVisibleElement(name));
 
 
 // Given
