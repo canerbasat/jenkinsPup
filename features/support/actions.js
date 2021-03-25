@@ -232,55 +232,107 @@ const choosePaymentTypeForPlane = async (paymentType) => {
   }
 }
 
-const selectDomesticFlight = async (destinatation) => {
-  if(destinatation=="OW"){
-    await waitFor(1)
-    const domesticFlights = await scope.currentPage.$$("div[id='flightSearchForm:domesticFlights'] > table > tbody> tr > td:nth-child(5) > div[class='containerFN'] > ul > li > table > tbody > tr > td > input[title='Turkish Airlines']");
-    const domesticFlightsRandom = Math.floor(Math.random() * domesticFlights.length) + 1;
-    await domesticFlights[domesticFlightsRandom].click();
-    await waitFor(1)
-    await clickOn("btn_UcusListesi_DevamEt") 
-  }else{
-    await waitFor(1)
-    const domesticFlights = await scope.currentPage.$$("div[id='flightSearchForm:domesticFlights'] > table > tbody> tr > td:nth-child(5) > div[class='containerFN'] > ul > li > table > tbody > tr > td > input[title='Turkish Airlines']");
-    const domesticFlightsRandom = Math.floor(Math.random() * domesticFlights.length) + 1;
-    await domesticFlights[domesticFlightsRandom].click();
-    await waitFor(1)
-    const returnFlights = await scope.currentPage.$$("div[id='flightSearchForm:returnFlights'] > table > tbody> tr > td:nth-child(5) > div[class='containerFN'] > ul > li > table > tbody > tr > td > input[title='Turkish Airlines']");
-    const returnFlightsLength = Math.floor(Math.random() * returnFlights.length) + 1;
-    await returnFlights[returnFlightsLength].click();
-    await clickOn("btn_UcusListesi_DevamEt") 
+const selectDomesticFlight = async (flightType,destinatation) => {
+  if(flightType=="YDisi"){
+    if(destinatation=="OW"){
+      await waitFor(1);
+      const flights = await scope.currentPage.$$("tr.rich-table-row .btn");
+      await waitFor(1)
+      const flightsRandom = await Math.floor(Math.random() * flights.length) + 1;
+      await flights[flightsRandom].click();
+      await waitFor(1)
+    }else{
+      await waitFor(1);
+      const flights = await scope.currentPage.$$("tr.rich-table-row .btn");
+      await waitFor(1)
+      const flightsRandom = await Math.floor(Math.random() * flights.length) + 1;
+      await flights[flightsRandom].click();
+      await waitFor(1)
+    }
+  }else//Yurtici
+  {
+    if(destinatation=="OW"){
+      await waitFor(1)
+      const domesticFlights = await scope.currentPage.$$("div[id='flightSearchForm:domesticFlights'] > table > tbody> tr > td:nth-child(5) > div[class='containerFN'] > ul > li > table > tbody > tr > td > input[title='Turkish Airlines']");
+      await waitFor(1)
+      const domesticFlightsRandom = Math.floor(Math.random() * domesticFlights.length) + 1;
+      await waitFor(1)
+      await domesticFlights[domesticFlightsRandom].click();
+      await waitFor(1)
+      await clickOn("btn_UcusListesi_DevamEt") 
+    }else{
+      await waitFor(1)
+      const domesticFlights = await scope.currentPage.$$("div[id='flightSearchForm:domesticFlights'] > table > tbody> tr > td:nth-child(5) > div[class='containerFN'] > ul > li > table > tbody > tr > td > input[title='Turkish Airlines']");
+      await waitFor(1)
+      const domesticFlightsRandom = Math.floor(Math.random() * domesticFlights.length) + 1;
+      await waitFor(1)
+      await domesticFlights[domesticFlightsRandom].click();
+      await waitFor(1)
+      const returnFlights = await scope.currentPage.$$("div[id='flightSearchForm:returnFlights'] > table > tbody> tr > td:nth-child(5) > div[class='containerFN'] > ul > li > table > tbody > tr > td > input[title='Turkish Airlines']");
+      await waitFor(1)
+      const returnFlightsRandom = Math.floor(Math.random() * returnFlights.length) + 1;
+      await returnFlights[returnFlightsRandom].click();
+      await clickOn("btn_UcusListesi_DevamEt") 
+    }
   }
 };
 
 
 
-const fillPasssengerInformationPlain = async () => {
+const fillPasssengerInformationPlain = async (flightType) => {
   const cinsiyet = getSelector("btn_Ucus_Yolcu_Bilgileri_Cinsiyet");
   await scope.currentPage.waitForSelector(cinsiyet,{visible: true});
   const passengersCount = (await scope.currentPage.$$("input[class='form-control nameUnique']")).length;
-  for (let j = 0; j < passengersCount; j++) {
-    waitFor(1)
+  if(flightType=="YDisi"){
+    for (let j = 0; j < passengersCount; j++) {
+      waitFor(1)
+      let cinsiyet = await scope.currentPage.$$("select[class='form-control genderUnique']")
+      let adBilgisi = await scope.currentPage.$$("input[class='form-control nameUnique']");
+      let soyadBilgisi = await scope.currentPage.$$("input[class='form-control surnameUnique']");
+      let dogumTarihi =  await scope.currentPage.$$("input[class='form-control dateOfBirthUnique']");
+      let eposta = await scope.currentPage.$$("input[class='form-control eMailUnique']");
+      let gsdmKod = await scope.currentPage.$$("input[class='form-control gsmCodeUnique']");
+      let gsmNumara = await scope.currentPage.$$("input[class='form-control gsmNumberUnique']");
+      let tckn = await scope.currentPage.$$("input[class='form-control identityUnique']");
+      let pasaportNo = await scope.currentPage.$$("input[class='form-control passaportUnique']");
+      let gecerlilikTarihi = await scope.currentPage.$$("input[class='form-control passportValidUnique']");
+      let uyruk = await scope.currentPage.$$("select[class='form-control nationalityUnique']");
 
-    let cinsiyet = await scope.currentPage.$$("select[class='form-control genderUnique']")
-    let adBilgisi = await scope.currentPage.$$("input[class='form-control nameUnique']");
-    let soyadBilgisi = await scope.currentPage.$$("input[class='form-control surnameUnique']");
-    let dogumTarihi =  await scope.currentPage.$$("input[class='form-control dateOfBirthUnique']");
-    let eposta = await scope.currentPage.$$("input[class='form-control eMailUnique']");
-    let gsdmKod = await scope.currentPage.$$("input[class='form-control gsmCodeUnique']");
-    let gsmNumara = await scope.currentPage.$$("input[class='form-control gsmNumberUnique']");
-    let tckn = await scope.currentPage.$$("input[class='form-control identityUnique']");
-    let hesKodu = await scope.currentPage.$$("input[class='form-control hesCodeUnique']");
-
-    await cinsiyet[j].select("1");
-    await adBilgisi[j].type("Caner");
-    await soyadBilgisi[j].type("Basat");
-    await dogumTarihi[j].type("12/11/1996");
-    await eposta[j].type("test@test.com");
-    await gsdmKod[j].type("534");
-    await gsmNumara[j].type("4585220");
-    await tckn[j].type("48703351180");
-    await hesKodu[j].type("N4E9865717");
+      await cinsiyet[j].select("1");
+      await adBilgisi[j].type("Caner");
+      await soyadBilgisi[j].type("Basat");
+      await dogumTarihi[j].type("12/11/1996");
+      await eposta[j].type("test@test.com");
+      await gsdmKod[j].type("534");
+      await gsmNumara[j].type("4585220");
+      await tckn[j].type("48703351180");
+      await pasaportNo[j].type("U123456");
+      await gecerlilikTarihi[j].type("01/01/2023");
+      await uyruk[j].select("2");
+    }
+  }else{
+    for (let j = 0; j < passengersCount; j++) {
+      waitFor(1)
+      let cinsiyet = await scope.currentPage.$$("select[class='form-control genderUnique']")
+      let adBilgisi = await scope.currentPage.$$("input[class='form-control nameUnique']");
+      let soyadBilgisi = await scope.currentPage.$$("input[class='form-control surnameUnique']");
+      let dogumTarihi =  await scope.currentPage.$$("input[class='form-control dateOfBirthUnique']");
+      let eposta = await scope.currentPage.$$("input[class='form-control eMailUnique']");
+      let gsdmKod = await scope.currentPage.$$("input[class='form-control gsmCodeUnique']");
+      let gsmNumara = await scope.currentPage.$$("input[class='form-control gsmNumberUnique']");
+      let tckn = await scope.currentPage.$$("input[class='form-control identityUnique']");
+      let hesKodu = await scope.currentPage.$$("input[class='form-control hesCodeUnique']");
+  
+      await cinsiyet[j].select("1");
+      await adBilgisi[j].type("Caner");
+      await soyadBilgisi[j].type("Basat");
+      await dogumTarihi[j].type("12/11/1996");
+      await eposta[j].type("test@test.com");
+      await gsdmKod[j].type("534");
+      await gsmNumara[j].type("4585220");
+      await tckn[j].type("48703351180");
+      await hesKodu[j].type("N4E9865717");
+    }
   }
   await clickOn("btn_Ucus_AcenteKurallari")
   await clickOn("btn_Ucus_UcusKurallari")

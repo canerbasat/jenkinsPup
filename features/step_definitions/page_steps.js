@@ -49,8 +49,8 @@ Given(/Gidis ucus tarihi (.+) gun sonrasina secilir/, async (inDate) =>
 selectDepartureDatePlane(inDate)
 );
 
-Given(/Ucus (.+) secilir/, async (destinatation) =>
-selectDomesticFlight(destinatation)
+Given(/(.+) Ucus (.+) secilir/, async (flightType,destinatation) =>
+selectDomesticFlight(flightType,destinatation)
 );
 
 
@@ -76,8 +76,8 @@ roomTypeSelectAndFillInfo()
 );
 
 
-Given("Yolcu ucusbilgileri doldurulur", async () =>
-fillPasssengerInformationPlain()
+Given(/(.+) yolcu ucus bilgileri doldurulur/, async (flightType) =>
+fillPasssengerInformationPlain(flightType)
 );
 
 
