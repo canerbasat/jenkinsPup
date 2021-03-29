@@ -1,8 +1,11 @@
-const { BeforeAll, AfterAll, After, setDefaultTimeout , Before} = require('cucumber');
+const {BeforeAll, AfterAll, After, setDefaultTimeout , Before} = require('cucumber');
 const puppeteer = require('puppeteer');
+
 
 const scope = require('./support/scope');
 const { DEFAULT_TIMEOUT, DEFAULT_VIEWPORT } = require('./support/constants');
+
+
 
 
 
@@ -31,6 +34,8 @@ Before(async () => {
 
 
 
+
+
 After(async () => {
   if (scope.browser && scope.currentPage) {
     await scope.context.close();
@@ -41,6 +46,8 @@ After(async () => {
     scope.savedHref = null;
   }
 });
+
+
 //BeforeAll olarak cagırdıgında tum testleri tek browserda yeni tablarda calıstırıyor loginSession dusmuyo o yuzden before kullan
 /*
 Before(async () => {

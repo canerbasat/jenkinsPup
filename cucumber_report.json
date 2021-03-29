@@ -19,11 +19,11 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
-              "location": "features\\hooks.js:9"
+              "location": "features\\hooks.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 221000000
+              "duration": 249000000
             }
           },
           {
@@ -36,7 +36,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3181000000
+              "duration": 3180000000
             }
           },
           {
@@ -49,7 +49,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 41000000
+              "duration": 37000000
             }
           },
           {
@@ -62,7 +62,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 27000000
             }
           },
           {
@@ -75,7 +75,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 344000000
+              "duration": 386000000
             }
           },
           {
@@ -88,7 +88,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 29000000
             }
           },
           {
@@ -101,7 +101,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30000000
+              "duration": 26000000
             }
           },
           {
@@ -114,7 +114,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1448000000
+              "duration": 1911000000
             }
           },
           {
@@ -127,7 +127,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 567000000
+              "duration": 1074000000
             }
           },
           {
@@ -140,7 +140,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 598000000
+              "duration": 823000000
             }
           },
           {
@@ -153,7 +153,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 25000000
             }
           },
           {
@@ -166,7 +166,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 574000000
+              "duration": 736000000
             }
           },
           {
@@ -179,7 +179,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6101000000
+              "duration": 6132000000
             }
           },
           {
@@ -192,7 +192,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3059000000
+              "duration": 3065000000
             }
           },
           {
@@ -218,7 +218,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 24000000
             }
           },
           {
@@ -231,7 +231,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5703000000
+              "duration": 9890000000
             }
           },
           {
@@ -244,7 +244,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5151000000
+              "duration": 7097000000
             }
           },
           {
@@ -257,7 +257,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8128000000
+              "duration": 9415000000
             }
           },
           {
@@ -270,7 +270,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 405000000
+              "duration": 604000000
             }
           },
           {
@@ -283,7 +283,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1013000000
+              "duration": 1012000000
             }
           },
           {
@@ -296,7 +296,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 21000000
             }
           },
           {
@@ -308,975 +308,20 @@
               "location": "features\\step_definitions\\page_steps.js:85"
             },
             "result": {
-              "status": "failed",
-              "duration": 30001000000,
-              "error_message": "TimeoutError: waiting for selector \"div[class='col-md-2 col-sm-4 col-xs-12 center'] > input[value='E-Bilet Kes']\" failed: timeout 30000ms exceeded\n    at new WaitTask (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\DOMWorld.js:383:34)\n    at DOMWorld._waitForSelectorOrXPath (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\DOMWorld.js:312:26)\n    at DOMWorld.waitForSelector (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\DOMWorld.js:295:21)\n    at Frame.waitForSelector (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\FrameManager.js:368:51)\n    at Frame.<anonymous> (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\helper.js:83:27)\n    at Page.waitForSelector (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\Page.js:704:33)\n    at seeVisibleElement (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\features\\support\\actions.js:119:27)\n    at World.<anonymous> (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\features\\step_definitions\\page_steps.js:85:56)"
+              "status": "passed",
+              "duration": 6122000000
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "features\\hooks.js:34"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 193000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "seturbiz-ucak;seturbiz-ucak-yurtici-tek-yon",
-        "keyword": "Scenario",
-        "line": 57,
-        "name": "Seturbiz Ucak YurtIci Tek Yon",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "features\\hooks.js:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 225000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 33,
-            "name": "Tarayici acilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:98"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3164000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 34,
-            "name": "\"btn_Cookie_Onay\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 36000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 35,
-            "name": "\"btn_Anasayfa_GirisYap\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 26000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 36,
-            "name": "\"tb_GirisYap_KullaniciAdi\" alanina caner.basat@setur.com.tr yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 340000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 37,
-            "name": "\"tb_GirisYap_Sifre\" alanina 47854785zZ yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 26000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 38,
-            "name": "\"tb_GirisYap_Submit\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 34000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 39,
-            "name": "\"btn_Ucak\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1399000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 40,
-            "name": "\"tb_Ucak_Nereden\" alanina İstanbul yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 527000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 41,
-            "name": "\"btn_Ucak_Nereden_Ilk_Secim\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 604000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 42,
-            "name": "\"btn_Ucus_TekYon\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 29000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 43,
-            "name": "\"tb_Ucak_Nereye\" alanina Adana yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 21000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 44,
-            "name": "\"btn_Ucak_Nereye_Ilk_Secim\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 559000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 45,
-            "name": "Gidis ucus tarihi 41 gun sonrasina secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6249000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 46,
-            "name": "\"btn_Ucak_YolcuSayisi\" menusunden 1 secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:102"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 8000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 47,
-            "name": "\"btn_Ucak_Ara\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 22000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 48,
-            "name": "\"btn_Ucus_Filtele\" gorunene kadar beklenir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:85"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3648000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 49,
-            "name": "YIci Ucus OW secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:52"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4050000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 50,
-            "name": "\"btn_Ucus_OnRezervasyon\" gorunene kadar beklenir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:85"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1722000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 51,
-            "name": "YIci yolcu ucus bilgileri doldurulur",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:79"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 382000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 52,
-            "name": "Ucak odeme tipi SirketOdemeli secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:66"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1011000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 53,
-            "name": "\"btn_Ucus_OnRezervasyon\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 28000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 54,
-            "name": "\"btn_Ucak_Ebilet_Kes\" gorunene kadar beklenir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:85"
+              "location": "features\\hooks.js:39"
             },
             "result": {
               "status": "failed",
-              "duration": 30001000000,
-              "error_message": "TimeoutError: waiting for selector \"div[class='col-md-2 col-sm-4 col-xs-12 center'] > input[value='E-Bilet Kes']\" failed: timeout 30000ms exceeded\n    at new WaitTask (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\DOMWorld.js:383:34)\n    at DOMWorld._waitForSelectorOrXPath (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\DOMWorld.js:312:26)\n    at DOMWorld.waitForSelector (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\DOMWorld.js:295:21)\n    at Frame.waitForSelector (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\FrameManager.js:368:51)\n    at Frame.<anonymous> (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\helper.js:83:27)\n    at Page.waitForSelector (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\node_modules\\puppeteer\\lib\\Page.js:704:33)\n    at seeVisibleElement (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\features\\support\\actions.js:119:27)\n    at World.<anonymous> (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\features\\step_definitions\\page_steps.js:85:56)"
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "features\\hooks.js:34"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 175000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "seturbiz-ucak;seturbiz-ucak-yurtdisis-gidiş-geliş",
-        "keyword": "Scenario",
-        "line": 88,
-        "name": "Seturbiz Ucak YurtDisis Gidiş Geliş",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "features\\hooks.js:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 222000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 61,
-            "name": "Tarayici acilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:98"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2950000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 62,
-            "name": "\"btn_Cookie_Onay\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 36000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 63,
-            "name": "\"btn_Anasayfa_GirisYap\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 31000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 64,
-            "name": "\"tb_GirisYap_KullaniciAdi\" alanina caner.basat@setur.com.tr yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 376000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 65,
-            "name": "\"tb_GirisYap_Sifre\" alanina 47854785zZ yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 24000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 66,
-            "name": "\"tb_GirisYap_Submit\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 31000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 67,
-            "name": "\"btn_Ucak\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1648000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 68,
-            "name": "\"tb_Ucak_Nereden\" alanina İstanbul yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 462000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 69,
-            "name": "\"btn_Ucak_Nereden_Ilk_Secim\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 688000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 70,
-            "name": "\"tb_Ucak_Nereye\" alanina Londra yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 24000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 71,
-            "name": "\"btn_Ucak_Nereye_Ilk_Secim\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 606000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 72,
-            "name": "Gidis ucus tarihi 38 gun sonrasina secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6099000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 73,
-            "name": "Donus ucus tarihi 41 gun sonrasina secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:58"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3055000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 74,
-            "name": "\"btn_Ucak_YolcuSayisi\" menusunden 1 secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:102"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 8000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 75,
-            "name": "\"btn_Ucak_Ara\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 18000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 76,
-            "name": "\"btn_Ucus_Filtele\" gorunene kadar beklenir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:85"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 15190000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 77,
-            "name": "YDisi Ucus RT secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:52"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3096000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 78,
-            "name": "\"btn_Ucus_OnRezervasyon\" gorunene kadar beklenir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:85"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 11248000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 79,
-            "name": "YDisi yolcu ucus bilgileri doldurulur",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:79"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 486000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 80,
-            "name": "Ucak odeme tipi SirketOdemeli secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:66"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1009000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 81,
-            "name": "\"btn_Ucus_OnRezervasyon\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 30000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 82,
-            "name": "\"btn_Ucak_Ebilet_Kes\" gorunene kadar beklenir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:85"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 11337000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "features\\hooks.js:34"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 175000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "seturbiz-ucak;seturbiz-ucak-yurtdisi-tek-yon",
-        "keyword": "Scenario",
-        "line": 118,
-        "name": "Seturbiz Ucak YurtDisi Tek Yon",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "features\\hooks.js:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 209000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 94,
-            "name": "Tarayici acilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:98"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2855000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 95,
-            "name": "\"btn_Cookie_Onay\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 35000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 96,
-            "name": "\"btn_Anasayfa_GirisYap\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 19000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 97,
-            "name": "\"tb_GirisYap_KullaniciAdi\" alanina caner.basat@setur.com.tr yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 354000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 98,
-            "name": "\"tb_GirisYap_Sifre\" alanina 47854785zZ yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 33000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 99,
-            "name": "\"tb_GirisYap_Submit\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 31000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 100,
-            "name": "\"btn_Ucak\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1281000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 101,
-            "name": "\"tb_Ucak_Nereden\" alanina İstanbul yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 477000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 102,
-            "name": "\"btn_Ucak_Nereden_Ilk_Secim\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 620000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 103,
-            "name": "\"btn_Ucus_TekYon\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 30000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 104,
-            "name": "\"tb_Ucak_Nereye\" alanina Londra yazilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 25000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 105,
-            "name": "\"btn_Ucak_Nereye_Ilk_Secim\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 606000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 106,
-            "name": "Gidis ucus tarihi 41 gun sonrasina secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6245000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 107,
-            "name": "\"btn_Ucak_YolcuSayisi\" menusunden 1 secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:102"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 108,
-            "name": "\"btn_Ucak_Ara\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 23000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 109,
-            "name": "\"btn_Ucus_Filtele\" gorunene kadar beklenir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:85"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7475000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 110,
-            "name": "YDisi Ucus OW secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:52"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3074000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 111,
-            "name": "\"btn_Ucus_OnRezervasyon\" gorunene kadar beklenir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:85"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5927000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 112,
-            "name": "YDisi yolcu ucus bilgileri doldurulur",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:79"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 468000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 113,
-            "name": "Ucak odeme tipi SirketOdemeli secilir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:66"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1010000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "* ",
-            "line": 114,
-            "name": "\"btn_Ucus_OnRezervasyon\" butonuna tiklanir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:113"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 25000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 115,
-            "name": "\"btn_Ucak_Ebilet_Kes\" gorunene kadar beklenir",
-            "match": {
-              "location": "features\\step_definitions\\page_steps.js:85"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4549000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "features\\hooks.js:34"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 166000000
+              "duration": 1000000,
+              "error_message": "TypeError: Cannot read property 'takeScreenshot' of undefined\n    at World.<anonymous> (C:\\Users\\canerTest\\Desktop\\jenkinsPup\\features\\hooks.js:41:17)"
             }
           }
         ]

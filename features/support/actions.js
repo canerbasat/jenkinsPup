@@ -271,7 +271,9 @@ const selectDomesticFlight = async (flightType,destinatation) => {
       const returnFlights = await scope.currentPage.$$("div[id='flightSearchForm:returnFlights'] > table > tbody> tr > td:nth-child(5) > div[class='containerFN'] > ul > li > table > tbody > tr > td > input[title='Turkish Airlines']");
       await waitFor(1)
       const returnFlightsRandom = Math.floor(Math.random() * returnFlights.length) + 1;
+      await waitFor(1)
       await returnFlights[returnFlightsRandom].click();
+      await waitFor(1)
       await clickOn("btn_UcusListesi_DevamEt") 
     }
   }
