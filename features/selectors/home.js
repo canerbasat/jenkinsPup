@@ -29,6 +29,7 @@ const HOME_SELECTORS = {
   "btn_YurtIciOtel_CikisTarihi": "input[id='hotelReservationForm:dateCheckOUTDecoration:checkOutInputDate']",
   "btn_YurtIciOtel_CikisTarihi_AyYil": "input[id='hotelReservationForm:dateCheckOUTDecoration:checkOutInputCurrentDate']",
   "btn_YurtIciOtel_RezervasyonYap_OdaTipi": "span[id='roomSizeUniq'] > select",
+  "btn_YurtDisiOtel_RezervasyonYap_Cinsiyet": "select[class='form-control ydGuestUniq']",
   "tb_YurtIciOtel_RezervasyonYap_Ad": "span[id='nameUniq'] > input",
   "lbl_Hatali_Login_Mesaji": "div.text-danger li",
   "btn_Cikis": "i[class='fa fa-sign-out fa-fw']",
@@ -77,14 +78,21 @@ const HOME_SELECTORS = {
   "btn_Ucus_Odeme_Tipi_KrediKarti": "input[value='CASH']",
   "btn_Ucus_TekYon": "input[value='true']",
   "btn_Ucak_Ebilet_Kes": "div[class='col-md-2 col-sm-4 col-xs-12 center'] > input[value='E-Bilet Kes']",
-
-
-
-
-  
-
-
-  
+  "btn_YurtDisiOtel_Sehir": "input[name='hotelReservationForm:locatioSearchDecorate:where']",
+  "btn_YurtDisiOtel_GidisTarihi": "input[name='hotelReservationForm:dateCheckINDecoration:dateCheckINInputDate']",
+  "btn_YurtDisiOtel_DonusTarihi": "input[name='hotelReservationForm:dateCheckOUTDecoration:dateCheckOUTInputDate']",
+  "btn_YurtDisiOtel_Yildiz": "select[name='hotelReservationForm:starRatingDecorate:rateID']",
+  "btn_YurtDisiOtel_OdaSayisi": "#hotelReservationForm div:nth-of-type(5) .form-control",
+  "btn_YurtDisiOtel_KisiSayisi":"#hotelReservationForm .col-md-4 div .form-control",
+  "btn_YurtDisiOtel_OdemeTipi": "select[name='hotelReservationForm:paymentDecoration:revenueMenu']",
+  "btn_YurtDisiOtel_Devam": "input[name='hotelReservationForm:nextbtn']",
+  "btn_YurtDisiOtel_Oteller": "input[value='Fiyatları Göster']",
+  "btn_YurtDisiOtel_Otel_Fiyatlari":"input[value='SATIN AL']",
+  "btn_YurtDisiOtel_GidisTarihiGunler":"td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-today rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-btn']",
+  "btn_YurtDisiOtel_GidisTarihi_SonrakiAy": "td[class='rich-calendar-header'] td:nth-of-type(4)",
+  "btn_YurtDisiOtel_Sehir_Ilk_Sehir": ".rich-sb-int-sel > .rich-table-cell",
+  "btn_YurtDisiOtel_OdemeTipi": "select[name='hotelReservationForm:paymentDecoration:revenueMenu']",
+  "btn_YurtDisiOtel_IlkOtel": ".rich-table-firstrow",
   
 };
 

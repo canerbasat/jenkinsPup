@@ -28,4 +28,3 @@ Feature: Seturbiz Ucak
          Examples:
         | LoginUser              |LoginUserPassword|DepartureDate|ReturnDate    |Where       |To        |NumberOfPassenger|PaymentType  |Destination|FlightType|
         |caner.basat@setur.com.tr|47854785zZ       |38            |41            |İstanbul    |Adana     |1                |SirketOdemeli|RT         |YIci|
-   

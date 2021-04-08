@@ -9,7 +9,6 @@ Feature: Seturbiz
         * "tb_GirisYap_Submit" butonuna tiklanir
         * "lbl_Hatali_Login_Mesaji" elementi "Lütfen kullanıcı adı ve şifrenizi kontrol ediniz. Şifrenizi Hatırlamıyorsanız, Şifre Yenile / Hatırla linkinden hatırlatma yapabilirsiniz." degerine esittir
 
-
 Scenario: Basarili login olma
         * Tarayici acilir
         * "btn_Cookie_Onay" butonuna tiklanir

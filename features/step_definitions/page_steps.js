@@ -38,12 +38,24 @@ const {
   selectReturnDatePlane,
   selectDomesticFlight,
   fillPasssengerInformationPlain,
-  choosePaymentTypeForPlane
+  choosePaymentTypeForPlane,
+  selectDepartureDateForAbroadOtel,
+  choosePaymentTypeForAbroadOtel,
+  clickRandomInList,
+  fillInfoForAbroadOtel,
 } = require('../support/actions');
+
+Given(/"(.+)" listesinden rastgele tiklanir/, async (name) => clickRandomInList(name));
+
 
 Given(/Gidis tarihi (.+) gun sonrasina secilir/, async (inDate) =>
 selectInAndOutDate(inDate)
 );
+
+Given(/Yurtdisi otel gidis tarihi (.+) gun sonrasina secilir/, async (inDate) =>
+selectDepartureDateForAbroadOtel(inDate)
+);
+
 
 Given(/Gidis ucus tarihi (.+) gun sonrasina secilir/, async (inDate) =>
 selectDepartureDatePlane(inDate)
@@ -67,6 +79,10 @@ Given(/Ucak odeme tipi (.+) secilir/, async (paymentType) =>
 choosePaymentTypeForPlane(paymentType)
 );
 
+Given(/Yurtdışı otel odeme tipi (.+) secilir/, async (paymentType) =>
+choosePaymentTypeForAbroadOtel(paymentType)
+);
+
 
 
 
@@ -79,6 +95,11 @@ roomTypeSelectAndFillInfo()
 Given(/(.+) yolcu ucus bilgileri doldurulur/, async (flightType) =>
 fillPasssengerInformationPlain(flightType)
 );
+
+Given("Yurtdisiotel yolcu bilgileri doldurulur", async () =>
+fillInfoForAbroadOtel()
+);
+
 
 
 

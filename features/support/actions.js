@@ -47,6 +47,17 @@ const clickOn = async (name) => {
   await elementHandle.click({visible: true});
 };
 
+
+const clickRandomInList = async (name) => {
+  const selector = getSelector(name);
+  await scope.currentPage.waitForSelector(selector);
+  const elementHandle = await scope.currentPage.$$(selector);
+  const elemRandom = await Math.floor(Math.random() * elementHandle.length) + 1;
+  await waitFor(1)
+  await elementHandle[elemRandom].click();
+  await waitFor(1)
+}
+
 const typeIn = async (key, query) => {
   const selector = getSelector(key);
   await scope.currentPage.waitForSelector(selector);
@@ -209,6 +220,28 @@ const roomTypeSelectAndFillInfo = async () => {
 }
 
 
+
+const fillInfoForAbroadOtel = async () => {
+  const gender = getSelector("btn_YurtDisiOtel_RezervasyonYap_Cinsiyet");
+  await scope.currentPage.waitForSelector(gender,{visible: true});
+  const genderList = (await scope.currentPage.$$("select[class='form-control ydGuestUniq']")).length;
+  for (let j = 0; j < genderList; j++) {
+    waitFor(1)
+    const genderList = await scope.currentPage.$$("select[class='form-control ydGuestUniq']");
+    await genderList[j].select("1")
+  
+    await waitFor(3)
+    let adBilgisi = await scope.currentPage.$$("input[class='form-control ydNameUniq']");
+    let soyadBilgisi = await scope.currentPage.$$("input[class='form-control ydSurnameUniq']");
+
+    await waitFor(3)
+    await adBilgisi[j].type("Test");
+    await soyadBilgisi[j].type("Test");
+    await waitFor(1)
+  }
+}
+
+
 const choosePaymentType = async (paymentType) => {
   if(paymentType=="OteldeOde"){
     await waitFor(1)
@@ -219,6 +252,16 @@ const choosePaymentType = async (paymentType) => {
   }else if(paymentType=="KrediKarti"){
     await waitFor(1)
     await selectVal("btn_OdemeTipi","CASH")
+  }
+}
+
+const choosePaymentTypeForAbroadOtel = async (paymentType) => {
+  if(paymentType=="KrediKarti"){
+    await waitFor(1)
+    await selectVal("btn_YurtDisiOtel_OdemeTipi","CASH")
+  }else if(paymentType=="SirketOdemeli"){
+    await waitFor(1)
+    await selectVal("btn_YurtDisiOtel_OdemeTipi","FULLCREDIT")
   }
 }
 
@@ -383,6 +426,37 @@ const selectDepartureDate = async (inDate) => {
 }
 
 
+const selectDepartureDateForAbroadOtel = async (inDate) => {
+  var d = new Date();
+  var addDays = inDate;
+  d.setDate(d.getDate()+parseInt(inDate))
+  
+  var day = d.getDate();
+  var month = ("0" + (d.getMonth() + 1)).slice(-2); 
+  var year = d.getFullYear();
+  var departureDateMonthYear = month+"/"+year;
+  await console.log("Giris Tarihi: "+day+"/"+month+"/"+year);
+  await clickOn("btn_YurtDisiOtel_GidisTarihi");
+  var thisMonthValue = await scope.currentPage.$eval("input[name='hotelReservationForm:dateCheckINDecoration:dateCheckINInputCurrentDate']",
+                  element=> element.getAttribute("value"))
+  console.log(thisMonthValue)
+  
+  while(thisMonthValue!=departureDateMonthYear){
+    await waitFor(1)
+    await clickOn("btn_YurtDisiOtel_GidisTarihi_SonrakiAy")
+    await waitFor(1)
+    thisMonthValue = await scope.currentPage.$eval("input[name='hotelReservationForm:dateCheckINDecoration:dateCheckINInputCurrentDate']",
+    element=> element.getAttribute("value"));
+    if (thisMonthValue==01/2023) {
+      console.log("asd");
+    }
+  }
+  if(thisMonthValue==departureDateMonthYear){
+    const dayList = await scope.currentPage.$$("td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-today rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-calendar-btn'] , td[class='rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell rich-calendar-btn']");
+    await dayList[day-1].click();
+  }
+}
+
 const selectDepartureDatePlane = async (inDate) => {
   var d = new Date();
   var addDays = inDate;
@@ -514,4 +588,8 @@ module.exports = {
   selectDomesticFlight,
   fillPasssengerInformationPlain,
   choosePaymentTypeForPlane,
+  selectDepartureDateForAbroadOtel,
+  choosePaymentTypeForAbroadOtel,
+  clickRandomInList,
+  fillInfoForAbroadOtel,
 };
