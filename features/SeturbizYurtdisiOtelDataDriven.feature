@@ -20,8 +20,7 @@ Feature: SeturbizYurtDisiOtelDataDriven
         * "btn_YurtDisiOtel_Oteller" listesinden rastgele tiklanir
         * "btn_YurtDisiOtel_Otel_Fiyatlari" listesinden rastgele tiklanir
         * Yurtdisiotel yolcu bilgileri doldurulur
-      
+     
         Examples:
         | LoginUser              |LoginUserPassword|EntryDate|Destination        |NumberOfRooms|PaymentType|
         |caner.basat@setur.com.tr|47854785zZ       |1        |Berlin|1            |SirketOdemeli|
-  

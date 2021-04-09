@@ -93,6 +93,54 @@ const HOME_SELECTORS = {
   "btn_YurtDisiOtel_Sehir_Ilk_Sehir": ".rich-sb-int-sel > .rich-table-cell",
   "btn_YurtDisiOtel_OdemeTipi": "select[name='hotelReservationForm:paymentDecoration:revenueMenu']",
   "btn_YurtDisiOtel_IlkOtel": ".rich-table-firstrow",
+  "btn_Transfer_Sehir": "select[name='transferRequestForm:sehirDekorasyon:sehirSec']",
+  "tb_Transfer_Gsm": "input[name='transferRequestForm:gsmPhoneDecoration:gsmPhoneCode']",
+  "tb_Transfer_GsmNo": "input[name='transferRequestForm:gsmPhoneDecoration:gsmPhone']",
+  "tb_Transfer_eposta": "input[name='transferRequestForm:emailDecoration:email']",
+  "btn_Transfer_HavaAlanindanAdrese": ".margtop15.col-md-10 [value='1']",
+  "btn_Transfer_AdrestenHavaAlanina": ".margtop15.col-md-10 [value='2']",
+  "btn_Transfer_AdrestenAdrese": ".margtop15.col-md-10 [value='3']",
+  "btn_Transfer_TransferTarihi": "input[name='transferRequestForm:transferDateDecoration:checkInInputDate']",
+  "btn_Transfer_TransferSaati": " span[xmlns='http://www.w3.org/1999/xhtml'] > .col-md-4 div:nth-of-type(1) > select",
+  "btn_Transfer_TransferSaati_Dakika": "#transferRequestForm div:nth-of-type(2) > select:nth-of-type(1)",
+  "btn_Transfer_Valiz_Sayisi": "input[name='transferRequestForm:suitcaseNumberDecoration:suitcaseNumber']",
+  "btn_Transfer_Kisi_Sayisi": "span[xmlns='http://www.w3.org/1999/xhtml'] > .col-md-3 .col-md-12 > span > .form-control",
+  "btn_Transfer_Varis_Adresi": "textarea[name='transferRequestForm:arrivalAddressDecoration:arrivalAddress']",
+  "btn_Transfer_Kalkis_Adresi": "textarea[name='transferRequestForm:departureAddressDecoration:arrivalAddress']",
+  "btn_Transfer_Kisi_TCKN_List": ".margtop10.col-md-12 > div [checked='checked']",
+  "btn_Transfer_Misafir_Adlari": ".margtop10.col-md-12 > div > div:nth-of-type(2) .form-control",
+  "btn_Transfer_Misafir_Soyadlari": ".margtop10.col-md-12 > div > div:nth-of-type(3) .form-control",
+  "btn_Transfer_Tarih_SonrakiAy": ".rich-calendar-header td:nth-of-type(4) > .rich-calendar-tool-btn",
+  "btn_Transfer_Tarih_Gun": "tr:nth-of-type(5) > td:nth-of-type(5)",
+  "btn_Transfer_Ilk_Misafir_Ad": ".margbottom10 > div:nth-of-type(2) .form-control",
+  "btn_Transfer_Ilk_Misafir_SoyAd": ".margbottom10 > div:nth-of-type(3) .form-control",
+  "btn_Transfer_Ilk_Misafir_TC": ".margbottom10 > div:nth-of-type(4) .form-control",
+  "btn_Transfer_Talebi_Olustur": "input[name='transferRequestForm:nextbtn']",
+  "btn_Transfer_Basarili_Talep": "img[src='https://cdn.seturbiz.com/content/img/visual/icon/arrowSend.gif']",
+  "btn_Transfer_UcusNumarasi": "input[name='transferRequestForm:flightNumberDecoration:departureFlightNumber']",
+  "btn_Transfer_UcusTarihi": "span[xmlns='http://www.w3.org/1999/xhtml'] > .col-md-12 .rich-calendar-input",
+  "btn_Transfer_UcusTarihi_SonrakiAy": "span[xmlns='http://www.w3.org/1999/xhtml'] > div:nth-of-type(9) td:nth-of-type(4) > div:nth-of-type(1)",
+  "btn_Transfer_UcusTarihi_Gun": "span[xmlns='http://www.w3.org/1999/xhtml'] > div:nth-of-type(9) tr:nth-of-type(5) > td:nth-of-type(5)",
+  "btn_Transfer_UcusSaati": "span[xmlns='http://www.w3.org/1999/xhtml'] > div:nth-of-type(9) div:nth-of-type(1) > select:nth-of-type(1)",
+  "btn_Transfer_UcusSaatiDakika": "span[xmlns='http://www.w3.org/1999/xhtml'] > div:nth-of-type(9) div:nth-of-type(2) > select:nth-of-type(1)",
+  "btn_UcusHavaAlani": "select[name='transferRequestForm:airportDecoration:departureAirport']",
+  "btn_UcusHavaYolu": "select[name='transferRequestForm:airlineDecoration:departureAirline']",
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
   
 };
 
