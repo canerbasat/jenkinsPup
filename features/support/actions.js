@@ -347,7 +347,7 @@ const fillPasssengerInformationPlain = async (flightType) => {
       await adBilgisi[j].type("Caner");
       await soyadBilgisi[j].type("Basat");
       await dogumTarihi[j].type("12/11/1996");
-      await eposta[j].type("test@test.com");
+      await eposta[j].type("isgelistirme@seturbiz.com");
       await gsdmKod[j].type("534");
       await gsmNumara[j].type("4585220");
       await tckn[j].type("48703351180");
@@ -372,7 +372,7 @@ const fillPasssengerInformationPlain = async (flightType) => {
       await adBilgisi[j].type("Caner");
       await soyadBilgisi[j].type("Basat");
       await dogumTarihi[j].type("12/11/1996");
-      await eposta[j].type("test@test.com");
+      await eposta[j].type("isgelistirme@seturbiz.com");
       await gsdmKod[j].type("534");
       await gsmNumara[j].type("4585220");
       await tckn[j].type("48703351180");

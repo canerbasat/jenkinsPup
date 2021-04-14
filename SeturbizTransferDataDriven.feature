@@ -30,7 +30,7 @@ Feature: SeturbizTransferDataDriven
 
         Examples:
         | LoginUser              |LoginUserPassword|EntryDate|Destination        |NumberOfRooms|PaymentType  |TransferType       |
-        |caner.basat@setur.com.tr|47854785zZ       |1        |Berlin             |1            |SirketOdemeli|HavaAlanındanAdrese| 
+        |caner.basat@setur.com.tr|47854785zZ       |1        |Berlin             |1            |SirketOdemeli|Transfer_AdrestenAdrese| 
 
 
        Scenario Outline: SeturBizTransfer HavaAlanındanAdrese
@@ -114,7 +114,8 @@ Feature: SeturbizTransferDataDriven
 
         Examples:
         | LoginUser              |LoginUserPassword|EntryDate|Destination        |NumberOfRooms|PaymentType  |TransferType       |
-        |caner.basat@setur.com.tr|47854785zZ       |1        |Berlin             |1            |SirketOdemeli|HavaAlanındanAdrese| 
+        |caner.basat@setur.com.tr|47854785zZ       |1        |Berlin             |1            |SirketOdemeli|Transfer_AdrestenHavaAlanina|
+        
 
        
        

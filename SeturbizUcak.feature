@@ -56,7 +56,7 @@ Feature: Seturbiz Ucak
        | LoginUser              |LoginUserPassword|DepartureDate|ReturnDate    |Where       |To        |NumberOfPassenger|PaymentType  |Destination|FlightType|
         |caner.basat@setur.com.tr|47854785zZ       |41            |44            |İstanbul    |Adana     |1               |SirketOdemeli|OW         |YIci|
  
-
+ 
    Scenario Outline: Seturbiz Ucak YurtDisis Gidiş Geliş
         * Tarayici acilir
         * "btn_Cookie_Onay" butonuna tiklanir

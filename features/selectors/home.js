@@ -125,6 +125,36 @@ const HOME_SELECTORS = {
   "btn_Transfer_UcusSaatiDakika": "span[xmlns='http://www.w3.org/1999/xhtml'] > div:nth-of-type(9) div:nth-of-type(2) > select:nth-of-type(1)",
   "btn_UcusHavaAlani": "select[name='transferRequestForm:airportDecoration:departureAirport']",
   "btn_UcusHavaYolu": "select[name='transferRequestForm:airlineDecoration:departureAirline']",
+  "btn_Tren_YolcuSayisi": "#trainRequestForm > div > .col-md-4 select",
+  "btn_Tren_Nereden": "#trainRequestForm > .col-md-12 > div:nth-of-type(2) .form-control",
+  "btn_Tren_Nereye": "#trainRequestForm > .col-md-12 > div:nth-of-type(3) .form-control",
+  "btn_Tren_GidisTarihi": "input[name='trainRequestForm:departureDate:updateInputDate']",
+  "btn_Tren_Dakika": ".margtop10[size='1']",
+  "btn_Tren_GidisTarihiSonrakiAy": "#trainRequestForm > div:nth-of-type(3) td:nth-of-type(4) > div:nth-of-type(1)",
+  "btn_Tren_Gidis_Gun": "#trainRequestForm > .col-md-12 tr:nth-of-type(5) > td:nth-of-type(4)",
+  "btn_Tren_1Y_HesKodu": "input[maxlength='12']",
+  "btn_Tren_2Y_HesKodu": "span[xmlns='http://www.w3.org/1999/xhtml'] > div:nth-of-type(4) div > span > .form-control",
+  "btn_Tren_TalepOlustur": "input[name='trainRequestForm:save']",
+  "btn_Tren_BasariliTalep": "img[src='https://cdn.seturbiz.com/content/img/visual/icon/arrowSend.gif']",
+  "btn_Tren_Ekonomi": "input[value='E']",
+  "btn_Tren_YemekliEkonomi": "input[value='ED']",
+  "btn_Tren_Business": "input[value='B']",
+  "btn_Tren_BusinessPlus": "input[value='BP']",
+  "btn_Tren_DonusTarihi": "input[name='trainRequestForm:arrivalDate:checkOutInputDate']",
+  "btn_Tren_DonusTarihiSonrakiAy": "#trainRequestForm > div:nth-of-type(3) > span:nth-of-type(1) td:nth-of-type(4) > div:nth-of-type(1)",
+  "btn_Tren_DonusTarihiGun": "#trainRequestForm > div:nth-of-type(3) > span:nth-of-type(1) tr:nth-of-type(5) > td:nth-of-type(6)",
+  "btn_Tren_DonusTarihiDakika": "#trainRequestForm span > .col-md-12 > .col-md-2 .form-control",
+  "btn_Tren_GidisDonus": "#trainRequestForm > .col-md-12 .ucakCheckBox",
+  "btn_Tren_Esnek": "input[value='F']",
+
+
+
+
+
+
+
+
+  
 
 
 
