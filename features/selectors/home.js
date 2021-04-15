@@ -146,6 +146,31 @@ const HOME_SELECTORS = {
   "btn_Tren_DonusTarihiDakika": "#trainRequestForm span > .col-md-12 > .col-md-2 .form-control",
   "btn_Tren_GidisDonus": "#trainRequestForm > .col-md-12 .ucakCheckBox",
   "btn_Tren_Esnek": "input[value='F']",
+  "btn_Arac_Acenteler": ".enterpriseClass",
+  "btn_Arac_AlisYeri": ".col-md-10 > div:nth-of-type(3) .col-md-12 > span > .form-control",
+  "btn_Arac_BirakisYeri": ".col-md-10 > div:nth-of-type(4) > div > .col-md-12 > span > .form-control",
+  "btn_Arac_AlisTarihi": "input[id='b2cVehicleRequestForm:beginDateDecoration:beginDateInputDate']",
+  "btn_Arac_AlisSonrakiAy": ".col-md-10 td:nth-of-type(4) > div:nth-of-type(1)",
+  "btn_Arac_AlisGun": ".col-md-10 > div:nth-of-type(3) tr:nth-of-type(5) > td:nth-of-type(4)",
+  "btn_Arac_BirakisTarihi": "input[id='b2cVehicleRequestForm:endDateDecoration:endDateInputDate']",
+  "btn_Arac_BirakisGun": ".col-md-10 > div:nth-of-type(4) tr:nth-of-type(5) > td:nth-of-type(5)",
+  "btn_Arac_AlisSaat": ".col-md-10 div:nth-of-type(2) .col-md-3 > .form-control",
+  "btn_Arac_AlisDakika": ".col-md-10 div:nth-of-type(2) .col-md-4 > .form-control",
+  "btn_Arac_BirakisSaat": ".col-md-10 > .col-md-6 > div:nth-of-type(3) .col-md-3 > .form-control",
+  "btn_Arac_BirakisDakika": ".col-md-10 > .col-md-6 > div:nth-of-type(3) .col-md-4 > .form-control",
+  "btn_Arac_AraclariListele": "input[class='btn-searchNew']",
+  "btn_Arac_IlkArac": "div[xmlns='http://www.w3.org/1999/xhtml'] > div:nth-of-type(1) .btn-searchNew",
+  "btn_Havadenme": ".col-md-10 > div:nth-of-type(3) [value='86']",
+
+
+
+
+
+
+
+
+  
+
 
 
 
